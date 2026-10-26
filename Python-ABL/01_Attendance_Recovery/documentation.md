@@ -1,41 +1,39 @@
-# Documentation: Attendance Recovery Computation
+# Attendance Recovery
 
-## 1. Problem Statement
-Calculate a student's current attendance percentage and determine the number of additional consecutive classes they must attend to reach 75%, assuming no further absences.
+## Problem statement
+Validate attended and total classes; calculate percentage; if below 75%, count extra attended classes until threshold is reached.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Classes attended and total classes conducted (integers).
+## Assumptions
+Assume all future classes are attended.
 
-## 4. Output
-Attendance percentage, eligibility message, or number of additional classes needed.
+## Algorithm
+Read attended and conducted. If invalid, show error. Otherwise calculate percentage. If below 75%, loop until ratio reaches 0.75.
 
-## 5. Algorithm
-1. Read attended and conducted class counts.
-2. Reject totals that are not positive or attended counts outside 0..conducted.
-3. Calculate percentage = attended / conducted × 100.
-4. If percentage is at least 75%, report that the requirement is met.
-5. Otherwise, increase a counter until (attended + counter) / (conducted + counter) is at least 0.75, then display it.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-Input: attended = 60, conducted = 100
-Output: Attendance percentage: 60.00%
-Additional consecutive classes needed: 60
+READ attended, conducted
+IF conducted <= 0 OR attended < 0 OR attended > conducted: PRINT invalid
+ELSE: percentage = attended / conducted * 100; PRINT percentage
+IF percentage < 75: required = 0; WHILE (attended+required)/(conducted+required) < 0.75: required += 1; PRINT required
+ELSE: PRINT requirement satisfied
 ```
 
-## 7. Python Concepts Used
-input/output, type conversion, validation, arithmetic, if/else, while loop.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
