@@ -1,39 +1,37 @@
-# Documentation: Fuel Consumption and Route Cost
+# Fuel Cost Estimation
 
-## 1. Problem Statement
-Estimate the fuel required and fuel cost for a journey from its distance, vehicle mileage, and fuel price.
+## Problem statement
+Calculate fuel needed and estimated trip cost from distance, mileage, and price per litre.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Distance in kilometres, mileage in km per litre, and price per litre.
+## Assumptions
+Mileage and price are constant throughout the trip.
 
-## 4. Output
-Estimated litres required and cost in rupees.
+## Algorithm
+Read distance, mileage, price. Validate. Compute distance/mileage and multiply by price.
 
-## 5. Algorithm
-1. Read distance, mileage, and fuel price.
-2. Check that distance and mileage are positive and price is non-negative.
-3. Calculate fuel = distance / mileage.
-4. Calculate cost = fuel × price.
-5. Display fuel and cost rounded to two decimal places.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-Input: distance 150 km, mileage 15 km/L, price ₹100/L → fuel 10.00 L; cost ₹1000.00.
+READ distance, mileage, price
+IF distance < 0 OR mileage <= 0 OR price < 0: PRINT invalid
+ELSE fuel = distance / mileage; cost = fuel * price; PRINT fuel and cost
 ```
 
-## 7. Python Concepts Used
-input/output, type conversion, validation, arithmetic, formatted output.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
