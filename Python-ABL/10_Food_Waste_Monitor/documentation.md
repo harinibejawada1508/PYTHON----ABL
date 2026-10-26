@@ -1,39 +1,39 @@
-# Documentation: Food Waste Monitoring System
+# Food Waste Monitoring
 
-## 1. Problem Statement
-Record daily food waste over a selected period and report total and average waste, with a simple suggestion based on the average.
+## Problem statement
+Calculate total and average daily food waste and show a suggestion based on average.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Positive number of days and food waste in kilograms for each day.
+## Assumptions
+Values are kilograms; negative entries are treated as zero.
 
-## 4. Output
-Total waste, average daily waste, and a suggestion; negative waste triggers an error.
+## Algorithm
+Read positive days, collect daily waste, replace negative values with zero, calculate total and average, then show advice.
 
-## 5. Algorithm
-1. Read the number of days and validate it is positive.
-2. Collect each day's waste amount.
-3. If a negative amount is entered, show an error and stop collection.
-4. If all days were recorded, calculate total and average waste.
-5. If average is above 2 kg, suggest planning portions and storing leftovers safely; otherwise encourage continued monitoring.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-Three days: 1, 2, 3 kg → total 6.00 kg, average 2.00 kg; keep monitoring food waste.
+READ days
+IF days <= 0: PRINT error
+ELSE FOR each day: READ waste; IF negative set zero; add to total
+average = total/days; PRINT total and average
+IF average > 2: suggest review portions; ELSE encourage monitoring
 ```
 
-## 7. Python Concepts Used
-lists, loops, validation, sum, averages, conditionals.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
