@@ -1,38 +1,37 @@
-# Documentation: Nested Loop Calendar Generator
+# Calendar Generator
 
-## 1. Problem Statement
-Display a calendar for a user-selected month and year using Python's built-in calendar module.
+## Problem statement
+Display the calendar for a selected month and year.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Year greater than zero and month from 1 to 12.
+## Assumptions
+Year and month are integers; Python calendar module is available.
 
-## 4. Output
-A formatted month calendar or a validation message.
+## Algorithm
+Read year and month, validate ranges, and print the month calendar.
 
-## 5. Algorithm
-1. Import the calendar module.
-2. Read year and month.
-3. Check that year is positive and month is between 1 and 12.
-4. Print calendar.month(year, month), or show an error for invalid input.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-Input: year 2026, month 10 → prints the October 2026 calendar.
+IMPORT calendar; READ year, month
+IF year < 1 OR month not in 1..12: PRINT invalid
+ELSE PRINT calendar.month(year, month)
 ```
 
-## 7. Python Concepts Used
-imports, input/output, integer conversion, validation, library functions.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
