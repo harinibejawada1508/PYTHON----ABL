@@ -1,43 +1,38 @@
-# Documentation: Numeric Diamond Pattern Generator
+# Numeric Diamond Pattern
 
-## 1. Problem Statement
-Print a numeric diamond pattern using nested loops, increasing the number of values per row and then decreasing it.
+## Problem statement
+Print an increasing numeric triangle followed by a decreasing triangle.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Positive integer height.
+## Assumptions
+Input is an integer row count.
 
-## 4. Output
-A centred numeric pattern with rows from 1 up to the height and back down.
+## Algorithm
+Reject non-positive rows. Print rows 1..n and then n-1..1 with leading spaces.
 
-## 5. Algorithm
-1. Read the diamond height.
-2. If height is not positive, display an error.
-3. Loop from row 1 to height, printing leading spaces and numbers 1 through the row number.
-4. Loop backwards from height - 1 to 1 and print the lower half.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-For height 3:
-  1
- 1 2
-1 2 3
- 1 2
-  1
+READ n
+IF n <= 0: PRINT error
+ELSE FOR i = 1 TO n: PRINT spaces and numbers 1..i
+FOR i = n-1 DOWNTO 1: PRINT spaces and numbers 1..i
 ```
 
-## 7. Python Concepts Used
-input/output, validation, for loops, nested iteration, range, strings.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
