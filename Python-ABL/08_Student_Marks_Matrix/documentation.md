@@ -1,39 +1,39 @@
-# Documentation: Student Marks Matrix Analysis
+# Student Marks Matrix Analysis
 
-## 1. Problem Statement
-Store marks for multiple students and subjects in a nested list, then calculate each student's total/average and each subject's average.
+## Problem statement
+Store student marks in a nested list and calculate each student's and each subject's average.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Positive student and subject counts, followed by each mark.
+## Assumptions
+Numeric marks are entered; score ranges are not validated.
 
-## 4. Output
-Each student's marks, total and average, plus average marks for each subject.
+## Algorithm
+Read counts, validate positive counts, collect matrix with nested loops, print row averages and subject averages.
 
-## 5. Algorithm
-1. Read the number of students and subjects.
-2. Validate that both counts are positive.
-3. Use nested loops to collect each student's marks into a row, then add each row to the matrix.
-4. For each student, print marks, total, and average.
-5. For each subject, sum marks across students and print the subject average.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-For marks [[80, 90], [70, 80]], student averages are 85 and 75; subject averages are 75 and 85.
+READ students, subjects
+IF counts invalid: PRINT error
+ELSE collect marks matrix
+FOR each student row: PRINT row and average
+FOR each subject column: calculate and PRINT average
 ```
 
-## 7. Python Concepts Used
-nested lists, nested loops, indexing, sum, enumerate, arithmetic.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
