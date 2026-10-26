@@ -1,40 +1,38 @@
-# Documentation: Password Policy Validation
+# Password Policy Validation
 
-## 1. Problem Statement
-Check a password against a simple sample policy and report which requirements pass or fail.
+## Problem statement
+Check length, uppercase, lowercase, digit, and supported special character rules.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-A password string.
+## Assumptions
+Educational policy only; supported specials are !@#$%^&*()-_+=?.
 
-## 4. Output
-Pass/fail result for length, uppercase, lowercase, digit, and special-character rules, plus an overall result.
+## Algorithm
+Scan password characters, set category flags, then check all flags and minimum length.
 
-## 5. Algorithm
-1. Read the password.
-2. Check whether it has at least 8 characters.
-3. Check for uppercase and lowercase letters, a digit, and a non-alphanumeric character.
-4. Display the result of each rule.
-5. If all rules pass, report that the sample policy is satisfied; otherwise ask the user to improve it.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-Input: Hello123!
-Output: all five checks pass; Password meets the sample policy.
+READ password; set all flags FALSE
+FOR each character: update matching flag
+IF length >= 8 AND all flags: PRINT meets policy
+ELSE PRINT does not meet policy and guidance
 ```
 
-## 7. Python Concepts Used
-strings, len, dictionaries, any, isupper/islower/isdigit, loops, all.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
