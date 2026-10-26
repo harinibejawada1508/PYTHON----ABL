@@ -1,40 +1,37 @@
-# Documentation: Multi-Day Water Tank Simulation
+# Water Tank Simulation
 
-## 1. Problem Statement
-Simulate the amount of water in a tank over several days as water is added and used, without allowing the stored amount to exceed tank capacity or fall below zero.
+## Problem statement
+Simulate tank level over multiple days, keeping it between zero and tank capacity.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Number of days, tank capacity, starting water level, and daily added/used litres.
+## Assumptions
+All water values are in litres; inflow and outflow are numeric.
 
-## 4. Output
-End-of-day water level for each day.
+## Algorithm
+Read capacity, starting water, days. Validate. For each day read inflow/outflow, update level, clamp to range, print.
 
-## 5. Algorithm
-1. Read days, capacity, and starting water.
-2. Validate positive days/capacity and starting water between zero and capacity.
-3. For each day, read added and used litres.
-4. If either amount is negative, show an error and stop.
-5. Add water but cap it at tank capacity; subtract usage but floor the level at zero.
-6. Display the end-of-day level.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-Example: capacity 100 L, starting level 50 L, add 20 L, use 15 L → end level 55.00 L.
+READ capacity, water, days
+IF invalid: PRINT error
+ELSE FOR each day: READ inflow, outflow; water = water + inflow - outflow; clamp water to [0, capacity]; PRINT water
 ```
 
-## 7. Python Concepts Used
-input/output, validation, for loop, arithmetic, min/max.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
