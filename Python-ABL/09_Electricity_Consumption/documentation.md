@@ -1,39 +1,39 @@
-# Documentation: Weekly Electricity Consumption Matrix
+# Electricity Consumption
 
-## 1. Problem Statement
-Record electricity usage for three time slots per day and calculate daily totals, overall usage, and average daily consumption.
+## Problem statement
+Record three electricity readings per day and calculate daily and overall totals and daily average.
 
-## 2. Objectives
-- Practise writing a small Python console program.
-- Accept user input and validate it where implemented.
-- Process the data and display understandable results.
+## Objectives
+- Practise basic Python programming and problem solving.
+- Accept input, process values, and display results.
+- Use validation, conditions, loops, and calculations where appropriate.
 
-## 3. Input
-Positive number of days and three non-negative kWh readings per day (the current code does not reject negative readings).
+## Assumptions
+Exactly three readings per day; negative readings are not rejected by current code.
 
-## 4. Output
-Daily consumption, total consumption, and average daily consumption in kWh.
+## Algorithm
+Read positive day count, collect three readings per day, total each row, then calculate overall average.
 
-## 5. Algorithm
-1. Read the number of days and validate that it is positive.
-2. For each day, collect three time-slot readings in a list.
-3. Store each daily row in a matrix.
-4. Calculate and display the sum for each day.
-5. Add daily totals and display overall and average consumption.
+## Flowchart
+See [flowchart.md](flowchart.md) for the flowchart.
 
-## 6. Sample Execution / Example
+## Pseudocode
 ```text
-One day with readings 1.2, 0.8, 1.0 kWh → daily and total 3.00 kWh; average 3.00 kWh.
+READ days
+IF days <= 0: PRINT error
+ELSE collect 3 readings per day
+FOR each row: calculate daily total
+PRINT overall total and total/days average
 ```
 
-## 7. Python Concepts Used
-nested lists, loops, input conversion, sum, enumerate, averages.
+## Python source code
+The runnable source is in [main.py](main.py).
 
-## 8. How to Run
-1. Install Python 3 if it is not already installed.
-2. Open a terminal in this folder.
-3. Run `python main.py` (on some systems use `python3 main.py`).
-4. Enter the requested values when prompted.
+## Test cases
+See [test_cases.md](test_cases.md) for normal and boundary test cases.
 
-## 9. Notes and Limitations
-This is an educational example, not a production system. Results depend on the values entered. Follow the validation messages and use realistic input values.
+## Output screenshots
+See the [screenshots folder](screenshots/) for the sample-run image. These are illustrative sample console images, not photographs of an actual terminal session.
+
+## Conclusion
+This case study demonstrates how a real-world task can be represented as an algorithm and implemented in Python. Running the program with valid and invalid inputs helps practise logic, testing, and interpreting output.
